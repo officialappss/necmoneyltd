@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nec Money Send Limited | Fast & Secure Money Transfer to Bangladesh</title>
+<meta name="description" content="Send money from Europe and Asia to Bangladesh quickly, safely, and easily with the Nec Money app. No queues, no delays, fully secure.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Nec Money Send Limited | Fast & Secure Money Transfer">
+<meta property="og:description" content="Send money from Europe and Asia to Bangladesh quickly, safely, and easily.">
+<meta property="og:url" content="https://taptapsnsdbd.shop">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green-dark: #006600;
+  --green-main: #008800;
+  --green-mid: #00aa00;
+  --green-light: #00cc00;
+  --green-pale: #e8fce8;
+  --green-glass: rgba(0,136,0,0.12);
+  --white: #ffffff;
+  --text-dark: #0f1f0f;
+  --text-mid: #2d4a2d;
+  --text-muted: #557755;
+  --border: rgba(0,136,0,0.15);
+  --shadow-card: 0 20px 60px rgba(0,100,0,0.12);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #f0fdf0;
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; }
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #e8fce8; }
+::-webkit-scrollbar-thumb { background: var(--green-main); border-radius: 3px; }
+
+/* ─── HEADER ─── */
+header {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 100%);
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,80,0,0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-badge {
+  background: #ffffff;
+  color: var(--green-dark);
+  font-weight: 800;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  letter-spacing: -0.5px;
+  font-family: 'Poppins', sans-serif;
+}
+.logo-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.95;
+  letter-spacing: 0.2px;
+}
+
+.menu-btn {
+  width: 40px; height: 40px;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center; gap: 5px;
+  cursor: pointer; border-radius: 10px;
+  transition: background 0.2s;
+}
+.menu-btn:hover { background: rgba(255,255,255,0.15); }
+.menu-btn span {
+  display: block; width: 22px; height: 2px;
+  background: #fff; border-radius: 2px;
+  transition: all 0.3s;
+}
+.menu-btn.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.menu-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.menu-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+.overlay-menu {
+  position: absolute;
+  top: 70px; right: 20px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  width: 200px;
+  overflow: hidden;
+  transform: scale(0.85) translateY(-10px);
+  transform-origin: top right;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), opacity 0.2s;
+}
+.overlay-menu.show {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+.overlay-menu a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 20px;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.15s, color 0.15s;
+}
+.overlay-menu a:last-child { border-bottom: none; }
+.overlay-menu a:hover { background: var(--green-pale); color: var(--green-dark); }
+.overlay-menu a .nav-icon { font-size: 18px; width: 24px; text-align: center; }
+
+/* ─── NOTICE TICKER ─── */
+.ticker-wrap {
+  background: linear-gradient(90deg, var(--green-dark), var(--green-main));
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+.ticker-wrap::before, .ticker-wrap::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2;
+}
+.ticker-wrap::before { left: 0; background: linear-gradient(90deg, var(--green-dark), transparent); }
+.ticker-wrap::after { right: 0; background: linear-gradient(270deg, var(--green-dark), transparent); }
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 28s linear infinite;
+}
+.ticker-item {
+  padding: 0 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: 0.3px;
+}
+.ticker-item::before { content: '💚 '; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, var(--green-dark) 0%, #005500 40%, #004400 100%);
+  color: #fff;
+  padding: 90px 24px 110px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Animated background circles */
+.hero-bg {
+  position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+}
+.hero-circle {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  animation: pulse-circle 6s ease-in-out infinite;
+}
+.hero-circle:nth-child(1) { width: 600px; height: 600px; top: -200px; right: -150px; animation-delay: 0s; }
+.hero-circle:nth-child(2) { width: 400px; height: 400px; bottom: -150px; left: -100px; animation-delay: 2s; }
+.hero-circle:nth-child(3) { width: 250px; height: 250px; top: 40%; left: 50%; animation-delay: 4s; background: rgba(0,255,0,0.06); }
+@keyframes pulse-circle { 0%,100%{transform:scale(1);opacity:1;} 50%{transform:scale(1.06);opacity:0.7;} }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 50px;
+  padding: 7px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  backdrop-filter: blur(8px);
+  animation: fadeInDown 0.6s ease;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(30px, 6vw, 54px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  animation: fadeInUp 0.7s ease 0.1s both;
+}
+.hero h1 .highlight {
+  background: linear-gradient(135deg, #7fff7f, #00ff66);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: clamp(15px, 2.5vw, 19px);
+  opacity: 0.85;
+  max-width: 520px;
+  margin: 0 auto 36px;
+  animation: fadeInUp 0.7s ease 0.2s both;
+}
+
+.hero-cta-group {
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+  animation: fadeInUp 0.7s ease 0.3s both;
+}
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, #00dd00, #00aa00);
+  color: #fff;
+  padding: 15px 34px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 8px 30px rgba(0,200,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(0,200,0,0.5); }
+.btn-primary:active { transform: translateY(0); }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.4);
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  transition: all 0.2s;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.25); transform: translateY(-3px); }
+
+/* Hero stats */
+.hero-stats {
+  display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+  margin-top: 60px;
+  animation: fadeInUp 0.7s ease 0.4s both;
+}
+.stat-item { text-align: center; }
+.stat-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px; font-weight: 800;
+  background: linear-gradient(135deg, #7fff7f, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+.stat-label { font-size: 13px; opacity: 0.7; font-weight: 500; }
+
+/* Wave divider */
+.wave-divider {
+  position: absolute; bottom: -2px; left: 0; right: 0;
+  line-height: 0;
+}
+.wave-divider svg { display: block; width: 100%; }
+
+/* ─── FLAG STRIP ─── */
+.flag-strip {
+  background: #fff;
+  padding: 20px 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.flag-strip::before, .flag-strip::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 60px; z-index: 2;
+}
+.flag-strip::before { left: 0; background: linear-gradient(90deg, #fff, transparent); }
+.flag-strip::after { right: 0; background: linear-gradient(270deg, #fff, transparent); }
+.flag-track {
+  display: flex; gap: 24px; white-space: nowrap;
+  animation: flagScroll 22s linear infinite;
+}
+.flag-item {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 600; color: var(--text-mid);
+  flex-shrink: 0;
+}
+.flag-item span.fi { font-size: 22px; }
+@keyframes flagScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ─── SECTION COMMONS ─── */
+.section { padding: 80px 24px; }
+.section-tag {
+  display: inline-block;
+  background: var(--green-pale);
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.section-title .accent { color: var(--green-main); }
+.section-sub { font-size: 16px; color: var(--text-muted); max-width: 520px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 56px; }
+
+/* ─── FEATURES GRID ─── */
+.features-section { background: #ffffff; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.feature-card {
+  background: #f8fff8;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.feature-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--green-main), var(--green-light));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(0,136,0,0.3);
+}
+.feature-card:hover::before { transform: scaleX(1); }
+.feature-icon {
+  width: 64px; height: 64px;
+  background: linear-gradient(135deg, var(--green-pale), #d0f5d0);
+  border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+  transition: transform 0.3s;
+}
+.feature-card:hover .feature-icon { transform: scale(1.1) rotate(5deg); }
+.feature-card h3 { font-size: 17px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+.feature-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+/* ─── DOWNLOAD SECTION ─── */
+.download-section {
+  background: linear-gradient(160deg, #003300 0%, #005500 50%, #003300 100%);
+  position: relative;
+  overflow: hidden;
+}
+.download-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(0,200,0,0.12), transparent 60%);
+}
+.download-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+.download-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.download-content h2 em {
+  font-style: normal;
+  color: #7fff7f;
+}
+.download-content p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+.download-btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: linear-gradient(135deg, #00ee00, #00bb00);
+  color: #003300;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 800;
+  box-shadow: 0 10px 40px rgba(0,230,0,0.35);
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+}
+.download-btn:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 16px 50px rgba(0,230,0,0.5); }
+.download-btn .btn-icon { font-size: 22px; }
+
+.download-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone-mockup {
+  width: 180px; height: 320px;
+  background: linear-gradient(160deg, #1a1a1a, #2d2d2d);
+  border-radius: 32px;
+  border: 6px solid #333;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.05);
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+  overflow: hidden;
+}
+.phone-mockup::before {
+  content: '';
+  position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+  width: 60px; height: 5px;
+  background: #444; border-radius: 3px;
+}
+.phone-screen {
+  position: absolute; inset: 16px 6px 6px;
+  background: linear-gradient(160deg, #003300, #005500);
+  border-radius: 22px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 10px;
+  padding: 16px;
+}
+.phone-logo-text {
+  color: #7fff7f; font-size: 13px; font-weight: 800; letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+.phone-amount { color: #fff; font-size: 22px; font-weight: 800; }
+.phone-label { color: rgba(255,255,255,0.6); font-size: 10px; }
+.phone-divider { width: 80%; height: 1px; background: rgba(255,255,255,0.1); }
+.phone-send-btn {
+  background: linear-gradient(135deg, #00dd00, #009900);
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 12px; font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0,200,0,0.4);
+  animation: pulse-btn 2s ease-in-out infinite;
+}
+@keyframes pulse-btn {
+  0%,100% { box-shadow: 0 4px 15px rgba(0,200,0,0.4); }
+  50% { box-shadow: 0 4px 30px rgba(0,200,0,0.7); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-14px) rotate(2deg); }
+}
+
+/* ─── HOW IT WORKS ─── */
+.how-section { background: var(--green-pale); }
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.step-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,100,0,0.08);
+  position: relative;
+  transition: transform 0.3s;
+}
+.step-card:hover { transform: translateY(-5px); }
+.step-number {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px; font-weight: 800;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 18px;
+  box-shadow: 0 6px 20px rgba(0,136,0,0.3);
+}
+.step-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+.step-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark); }
+.step-card p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+
+/* ─── CONTACT ─── */
+#contactSection {
+  display: none;
+  background: #ffffff;
+  border-top: 3px solid var(--green-pale);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact-card {
+  background: #f8fdf8;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(0,136,0,0.3);
+}
+.contact-icon {
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg, var(--green-pale), #c8f0c8);
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  margin: 0 auto 16px;
+}
+.contact-card h3 { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+.contact-card a { color: var(--green-dark); font-weight: 600; font-size: 14px; }
+.contact-card a:hover { color: var(--green-light); }
+
+/* ─── ABOUT ─── */
+#aboutSection {
+  display: none;
+  background: linear-gradient(160deg, #f0fdf0, #e0fae0);
+  border-top: 3px solid var(--green-pale);
+}
+.about-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 48px 40px;
+  max-width: 720px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+.about-logo {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-bottom: 28px;
+}
+.about-logo-badge {
+  background: var(--green-main);
+  color: #fff;
+  font-size: 22px; font-weight: 800;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+.about-logo-name { font-size: 20px; font-weight: 700; color: var(--text-dark); }
+.about-card h3 { font-size: 22px; font-weight: 700; color: var(--green-dark); margin-bottom: 16px; }
+.about-card p { font-size: 16px; color: var(--text-muted); line-height: 1.8; }
+.about-tags {
+  display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 28px;
+}
+.about-tag {
+  background: var(--green-pale);
+  color: var(--green-dark);
+  font-size: 13px; font-weight: 600;
+  padding: 6px 16px; border-radius: 50px;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: #011a01;
+  color: rgba(255,255,255,0.6);
+  padding: 32px 24px;
+  text-align: center;
+}
+.footer-logo {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-bottom: 12px;
+}
+.footer-badge {
+  background: var(--green-main);
+  color: #fff;
+  font-weight: 800; font-size: 14px;
+  padding: 4px 10px; border-radius: 7px;
+}
+.footer-name { color: rgba(255,255,255,0.8); font-weight: 600; font-size: 15px; }
+footer p { font-size: 13px; margin-top: 6px; }
+
+/* ─── WHATSAPP BTN ─── */
+.wa-float {
+  position: fixed;
+  bottom: 28px; right: 24px;
+  z-index: 9999;
+  display: flex; align-items: center; gap: 12px;
+}
+.wa-label {
+  background: #fff;
+  color: #128C7E;
+  font-size: 13px; font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 50px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  animation: bounceIn 0.6s 2s both;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.wa-float:hover .wa-label { opacity: 1 !important; }
+.wa-btn {
+  width: 58px; height: 58px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 30px rgba(18,140,126,0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: wa-pulse 3s ease-in-out infinite;
+  font-size: 28px;
+}
+.wa-btn:hover { transform: scale(1.12); box-shadow: 0 12px 40px rgba(18,140,126,0.6); }
+@keyframes wa-pulse {
+  0%,100% { box-shadow: 0 8px 30px rgba(18,140,126,0.45); }
+  50% { box-shadow: 0 8px 50px rgba(18,140,126,0.7), 0 0 0 10px rgba(18,140,126,0.1); }
+}
+
+/* ─── SCROLL REVEAL ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeInDown {
+  from { opacity:0; transform:translateY(-20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(24px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .download-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .download-visual { order: -1; }
+  .phone-mockup { width: 140px; height: 250px; }
+  .hero-stats { gap: 24px; }
+  .stat-value { font-size: 22px; }
+  .about-card { padding: 32px 24px; }
+}
+@media (max-width: 480px) {
+  .hero { padding: 60px 20px 90px; }
+  .hero-badge { font-size: 12px; }
+  .btn-primary, .btn-secondary { padding: 13px 24px; font-size: 14px; }
+  .section { padding: 60px 20px; }
+  .features-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <!-- NecMoney SVG Logo -->
+    <svg width="140" height="38" viewBox="0 0 140 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Coin/circle icon -->
+      <circle cx="19" cy="19" r="18" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="19" cy="19" r="13" fill="#ffffff" fill-opacity="0.1"/>
+      <!-- Taka / N letter -->
+      <text x="19" y="25" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="16" fill="#ffffff">N</text>
+      <!-- Arrow up-right for transfer -->
+      <path d="M26 10 L32 10 L32 16" stroke="#7fff7f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M32 10 L24 18" stroke="#7fff7f" stroke-width="2" stroke-linecap="round"/>
+      <!-- Brand name -->
+      <text x="44" y="16" font-family="Poppins,sans-serif" font-weight="800" font-size="14" fill="#ffffff" letter-spacing="0.5">Nec</text>
+      <text x="44" y="30" font-family="Inter,sans-serif" font-weight="500" font-size="10" fill="rgba(255,255,255,0.75)" letter-spacing="0.8">Money Send</text>
+      <!-- Green dot accent -->
+      <circle cx="74" cy="15" r="2.5" fill="#7fff7f"/>
+    </svg>
+  </div>
+  <div class="menu-btn" id="menuBtn">
+    <span></span><span></span><span></span>
+  </div>
+  <nav class="overlay-menu" id="overlayMenu">
+    <a href="#hero"><span class="nav-icon">🏠</span> হোম</a>
+    <a href="#download-section"><span class="nav-icon">⬇️</span> অ্যাপ ডাউনলোড</a>
+    <a href="#" id="contactLink"><span class="nav-icon">💬</span> যোগাযোগ</a>
+    <a href="#" id="aboutLink"><span class="nav-icon">ℹ️</span> আমাদের সম্পর্কে</a>
+  </nav>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">ইউরোপ থেকে বাংলাদেশে টাকা পাঠান দ্রুত ও নিরাপদে</span>
+    <span class="ticker-item">মিডল ইস্ট থেকে সহজেই রেমিটেন্স পাঠান</span>
+    <span class="ticker-item">কোনো লাইন নেই • কোনো দেরি নেই • সম্পূর্ণ সুরক্ষিত</span>
+    <span class="ticker-item">Nec Money – আপনার বিশ্বস্ত রেমিটেন্স অ্যাপ</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">ইউরোপ থেকে বাংলাদেশে টাকা পাঠান দ্রুত ও নিরাপদে</span>
+    <span class="ticker-item">মিডল ইস্ট থেকে সহজেই রেমিটেন্স পাঠান</span>
+    <span class="ticker-item">কোনো লাইন নেই • কোনো দেরি নেই • সম্পূর্ণ সুরক্ষিত</span>
+    <span class="ticker-item">Nec Money – আপনার বিশ্বস্ত রেমিটেন্স অ্যাপ</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-circle"></div>
+    <div class="hero-circle"></div>
+    <div class="hero-circle"></div>
+  </div>
+
+  <div class="hero-badge">🌍 ২০+ দেশ থেকে বাংলাদেশে</div>
+  <h1>বিদেশ থেকে দেশে <br><span class="highlight">টাকা পাঠান</span> সহজে</h1>
+  <p>Fast & Secure Money Transfer — কোনো ঝামেলা ছাড়াই মাত্র কয়েকটি ট্যাপে পরিবারের কাছে টাকা পাঠান।</p>
+
+  <div class="hero-cta-group">
+    <a href="necmoney.apk" download class="btn-primary">⬇ অ্যাপ ডাউনলোড করুন</a>
+    <a href="#" class="btn-secondary" id="heroContactBtn">💬 যোগাযোগ করুন</a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <span class="stat-value">২০+</span>
+      <span class="stat-label">দেশ থেকে পাঠান</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value">২৪/৭</span>
+      <span class="stat-label">কাস্টমার সাপোর্ট</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value">১০০%</span>
+      <span class="stat-label">সুরক্ষিত ট্রান্সফার</span>
+    </div>
+  </div>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+<!-- FLAG STRIP -->
+<div class="flag-strip">
+  <div class="flag-track">
+    <span class="flag-item"><span class="fi">🇸🇦</span> Saudi Arabia</span>
+    <span class="flag-item"><span class="fi">🇲🇾</span> Malaysia</span>
+    <span class="flag-item"><span class="fi">🇴🇲</span> Oman</span>
+    <span class="flag-item"><span class="fi">🇶🇦</span> Qatar</span>
+    <span class="flag-item"><span class="fi">🇰🇼</span> Kuwait</span>
+    <span class="flag-item"><span class="fi">🇦🇪</span> UAE</span>
+    <span class="flag-item"><span class="fi">🇫🇷</span> France</span>
+    <span class="flag-item"><span class="fi">🇩🇪</span> Germany</span>
+    <span class="flag-item"><span class="fi">🇮🇹</span> Italy</span>
+    <span class="flag-item"><span class="fi">🇳🇱</span> Netherlands</span>
+    <span class="flag-item"><span class="fi">🇬🇧</span> UK</span>
+    <span class="flag-item"><span class="fi">🇧🇪</span> Belgium</span>
+    <span class="flag-item"><span class="fi">🇵🇹</span> Portugal</span>
+    <span class="flag-item"><span class="fi">🇸🇪</span> Sweden</span>
+    <!-- duplicate -->
+    <span class="flag-item"><span class="fi">🇸🇦</span> Saudi Arabia</span>
+    <span class="flag-item"><span class="fi">🇲🇾</span> Malaysia</span>
+    <span class="flag-item"><span class="fi">🇴🇲</span> Oman</span>
+    <span class="flag-item"><span class="fi">🇶🇦</span> Qatar</span>
+    <span class="flag-item"><span class="fi">🇰🇼</span> Kuwait</span>
+    <span class="flag-item"><span class="fi">🇦🇪</span> UAE</span>
+    <span class="flag-item"><span class="fi">🇫🇷</span> France</span>
+    <span class="flag-item"><span class="fi">🇩🇪</span> Germany</span>
+    <span class="flag-item"><span class="fi">🇮🇹</span> Italy</span>
+    <span class="flag-item"><span class="fi">🇳🇱</span> Netherlands</span>
+    <span class="flag-item"><span class="fi">🇬🇧</span> UK</span>
+    <span class="flag-item"><span class="fi">🇧🇪</span> Belgium</span>
+    <span class="flag-item"><span class="fi">🇵🇹</span> Portugal</span>
+    <span class="flag-item"><span class="fi">🇸🇪</span> Sweden</span>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section features-section">
+  <div class="section-header reveal">
+    <span class="section-tag">কেন Nec Money?</span>
+    <h2 class="section-title">Why Trust <span class="accent">NecMoney?</span></h2>
+    <p class="section-sub">লক্ষ লক্ষ প্রবাসী বাংলাদেশি আমাদের বিশ্বাস করেন — কারণ আমরা নিরাপদ, দ্রুত এবং সাশ্রয়ী।</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <div class="feature-icon">🔒</div>
+      <h3>সম্পূর্ণ নিরাপদ</h3>
+      <p>Bank-grade encryption দিয়ে আপনার প্রতিটি ট্রান্সফার সুরক্ষিত।</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:0.1s">
+      <div class="feature-icon">⚡</div>
+      <h3>তাৎক্ষণিক ট্রান্সফার</h3>
+      <p>মিনিটের মধ্যে টাকা পৌঁছে যায় — কোনো বিলম্ব নেই।</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:0.2s">
+      <div class="feature-icon">💰</div>
+      <h3>সাশ্রয়ী চার্জ</h3>
+      <p>কম ফি-তে বেশি টাকা পাঠান — কোনো লুকানো চার্জ নেই।</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:0.3s">
+      <div class="feature-icon">🌐</div>
+      <h3>২০+ দেশ</h3>
+      <p>ইউরোপ ও মিডল ইস্টের ২০টিরও বেশি দেশ থেকে পাঠান।</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:0.4s">
+      <div class="feature-icon">📞</div>
+      <h3>২৪/৭ সাপোর্ট</h3>
+      <p>যেকোনো সমস্যায় আমাদের দল সবসময় আপনার পাশে।</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:0.5s">
+      <div class="feature-icon">📱</div>
+      <h3>সহজ অ্যাপ</h3>
+      <p>সহজ ইন্টারফেস — যে কেউ অনায়াসে ব্যবহার করতে পারবেন।</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="section download-section" id="download-section">
+  <div class="download-inner">
+    <div class="download-content reveal">
+      <span class="section-tag" style="background:rgba(255,255,255,0.1);color:#7fff7f;">অ্যাপ ডাউনলোড</span>
+      <h2>এখনই শুরু করুন <em>নিমেষেই</em> টাকা পাঠানো</h2>
+      <p>আমাদের অ্যাপ ডাউনলোড করুন এবং মাত্র কয়েক মিনিটে একাউন্ট খুলে প্রথম ট্রান্সফার করুন।</p>
+      <a href="necmoney.apk" download class="download-btn">
+        <span class="btn-icon">⬇</span> Download APK
+      </a>
+    </div>
+    <div class="download-visual reveal" style="transition-delay:0.2s">
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <div class="phone-logo-text">NEC MONEY</div>
+          <div class="phone-label">আপনার ব্যালেন্স</div>
+          <div class="phone-amount">৳ ৫,০০০</div>
+          <div class="phone-divider"></div>
+          <div class="phone-label" style="font-size:11px;color:rgba(255,255,255,0.5);">বাংলাদেশে পাঠান</div>
+          <div class="phone-send-btn">Send Now →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-section">
+  <div class="section-header reveal">
+    <span class="section-tag">সহজ ৩ ধাপ</span>
+    <h2 class="section-title">কীভাবে <span class="accent">কাজ করে?</span></h2>
+    <p class="section-sub">মাত্র তিনটি সহজ ধাপে টাকা পাঠান আপনার পরিবারের কাছে।</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card reveal">
+      <div class="step-number">১</div>
+      <span class="step-icon">📲</span>
+      <h3>অ্যাপ ডাউনলোড করুন</h3>
+      <p>APK ডাউনলোড করে ইন্সটল করুন এবং একাউন্ট তৈরি করুন।</p>
+    </div>
+    <div class="step-card reveal" style="transition-delay:0.15s">
+      <div class="step-number">২</div>
+      <span class="step-icon">💳</span>
+      <h3>পরিমাণ নির্বাচন করুন</h3>
+      <p>কত টাকা পাঠাতে চান এবং প্রাপকের তথ্য দিন।</p>
+    </div>
+    <div class="step-card reveal" style="transition-delay:0.3s">
+      <div class="step-number">৩</div>
+      <span class="step-icon">✅</span>
+      <h3>তাৎক্ষণিক পৌঁছে যায়</h3>
+      <p>কনফার্ম করুন — মিনিটের মধ্যে পরিবার পাবেন টাকা।</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contactSection">
+  <div class="section-header reveal">
+    <span class="section-tag">সাহায্য দরকার?</span>
+    <h2 class="section-title">আমাদের সাথে <span class="accent">যোগাযোগ করুন</span></h2>
+    <p class="section-sub">আমাদের সাপোর্ট টিম সবসময় আপনার পাশে আছে।</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card reveal">
+      <div class="contact-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+          <path fill="#25D366" d="M4.9 43.3l2.7-9.8C5.9 31.1 5 28.1 5 25 5 13.9 13.9 5 25 5s20 8.9 20 20-8.9 20-20 20c-3 0-5.9-.7-8.4-1.9L4.9 43.3z"/>
+          <path fill="#fff" d="M19.3 16c-.4-1-.7-1-1.1-1-.3 0-.6 0-.9.1-.3.1-.8.3-1.2.8-.4.5-1.6 1.6-1.6 3.8s1.6 4.4 1.9 4.7c.2.3 3.1 5 7.5 6.8 3.7 1.5 4.5 1.2 5.3 1.1.8-.1 2.6-1.1 3-2.1.4-1 .4-1.9.3-2.1-.1-.2-.4-.3-.9-.6-.4-.2-2.6-1.3-3-1.4-.4-.2-.7-.2-1 .2-.3.4-1.1 1.4-1.4 1.7-.3.3-.5.3-.9.1-.4-.2-1.7-.6-3.3-2-1.2-1.1-2-2.4-2.3-2.8-.3-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.3.3-.5.5-.8.2-.3.1-.6 0-.8-.1-.3-.9-2.3-1.2-3.1z"/>
+        </svg>
+      </div>
+      <h3>WhatsApp</h3>
+      <a href="https://wa.me/+447781573604?text=NecMoney%20আমি%20আপনাদের%20গ্রাহক%20হতে%20চাই" target="_blank">+447781573604</a>
+    </div>
+    <div class="contact-card reveal" style="transition-delay:0.1s">
+      <div class="contact-icon">📱</div>
+      <h3>Phone</h3>
+      <a href="tel:+447781573604">+447781573604</a>
+    </div>
+    <div class="contact-card reveal" style="transition-delay:0.2s">
+      <div class="contact-icon">📧</div>
+      <h3>Email</h3>
+      <a href="mailto:support@necmoney.com">support@necmoney.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="aboutSection">
+  <div class="about-card reveal">
+    <div class="about-logo">
+      <svg width="160" height="44" viewBox="0 0 160 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="20" fill="#006600" opacity="0.12" stroke="#008800" stroke-width="1.5"/>
+        <circle cx="22" cy="22" r="14" fill="#008800" opacity="0.15"/>
+        <text x="22" y="28" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="17" fill="#006600">N</text>
+        <!-- arrow -->
+        <path d="M30 11 L37 11 L37 18" stroke="#00aa00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M37 11 L28 20" stroke="#00aa00" stroke-width="2" stroke-linecap="round"/>
+        <!-- text -->
+        <text x="50" y="18" font-family="Poppins,sans-serif" font-weight="800" font-size="16" fill="#006600">NecMoney</text>
+        <text x="50" y="32" font-family="Inter,sans-serif" font-weight="500" font-size="10" fill="#557755" letter-spacing="1">SEND LIMITED</text>
+      </svg>
+    </div>
+    <h3>সুবিধাজনক, নিরাপদ ও দ্রুত।</h3>
+    <p>আমাদের স্মার্টফোন অ্যাপ ব্যবহার করে মাত্র কয়েকটি ট্যাপে ডেবিট কার্ড দিয়ে পরিবার ও বন্ধুদের কাছে টাকা পাঠান। আর কোনো লাইনে দাঁড়াতে হবে না, বা ট্রান্সফার পৌঁছেছে কিনা তা নিয়ে ভাবতে হবে না।</p>
+    <div class="about-tags">
+      <span class="about-tag">🔒 FCA Regulated</span>
+      <span class="about-tag">⚡ Instant Transfer</span>
+      <span class="about-tag">🌍 Global Reach</span>
+      <span class="about-tag">📞 24/7 Support</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="16" cy="16" r="15" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+      <text x="16" y="21" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="13" fill="#ffffff">N</text>
+      <text x="37" y="13" font-family="Poppins,sans-serif" font-weight="800" font-size="12" fill="#ffffff">Nec</text>
+      <text x="37" y="25" font-family="Inter,sans-serif" font-weight="400" font-size="9" fill="rgba(255,255,255,0.55)" letter-spacing="0.6">Money Send</text>
+      <circle cx="63" cy="12" r="2" fill="#7fff7f"/>
+    </svg>
+  </div>
+  <p>© 2026 Nec Money Send Limited · বিশ্বস্ত রেমিটেন্স প্ল্যাটফর্ম</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <span class="wa-label" id="waLabel">আমাদের সাথে কথা বলুন</span>
+  <a href="https://wa.me/+447781573604?text=NecMoney%20আমি%20আপনাদের%20গ্রাহক%20হতে%20চাই"
+     target="_blank" class="wa-btn" title="WhatsApp Chat">
+    <!-- Official WhatsApp Logo SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+      <path fill="#fff" d="M4.9 43.3l2.7-9.8C5.9 31.1 5 28.1 5 25 5 13.9 13.9 5 25 5s20 8.9 20 20-8.9 20-20 20c-3 0-5.9-.7-8.4-1.9L4.9 43.3z"/>
+      <path fill="#25D366" d="M25 7c-9.9 0-18 8.1-18 18 0 3.1.8 6.1 2.4 8.7l.5.8-1.9 7 7.2-1.9.8.4C18.7 41.3 21.8 42 25 42c9.9 0 18-8.1 18-18S34.9 7 25 7z"/>
+      <path fill="#fff" d="M19.3 16c-.4-1-.7-1-1.1-1-.3 0-.6 0-.9.1-.3.1-.8.3-1.2.8-.4.5-1.6 1.6-1.6 3.8s1.6 4.4 1.9 4.7c.2.3 3.1 5 7.5 6.8 3.7 1.5 4.5 1.2 5.3 1.1.8-.1 2.6-1.1 3-2.1.4-1 .4-1.9.3-2.1-.1-.2-.4-.3-.9-.6-.4-.2-2.6-1.3-3-1.4-.4-.2-.7-.2-1 .2-.3.4-1.1 1.4-1.4 1.7-.3.3-.5.3-.9.1-.4-.2-1.7-.6-3.3-2-1.2-1.1-2-2.4-2.3-2.8-.3-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.3.3-.5.5-.8.2-.3.1-.6 0-.8-.1-.3-.9-2.3-1.2-3.1z"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+// ── Menu toggle ──
+const menuBtn = document.getElementById('menuBtn');
+const overlayMenu = document.getElementById('overlayMenu');
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('open');
+  overlayMenu.classList.toggle('show');
+});
+document.addEventListener('click', (e) => {
+  if (!overlayMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    overlayMenu.classList.remove('show');
+    menuBtn.classList.remove('open');
+  }
+});
+
+// ── Section reveal ──
+function showSection(sectionId) {
+  const el = document.getElementById(sectionId);
+  el.style.display = 'block';
+  setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+}
+
+['contactLink','heroContactBtn'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', (e) => { e.preventDefault(); showSection('contactSection'); overlayMenu.classList.remove('show'); menuBtn.classList.remove('open'); });
+});
+document.getElementById('aboutLink').addEventListener('click', (e) => {
+  e.preventDefault(); showSection('aboutSection'); overlayMenu.classList.remove('show'); menuBtn.classList.remove('open');
+});
+
+// ── Scroll reveal ──
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+
+// ── WA label auto-show after 3s ──
+setTimeout(() => {
+  const lbl = document.getElementById('waLabel');
+  if (lbl) { lbl.style.opacity = '1'; setTimeout(() => { lbl.style.opacity = '0'; }, 4000); }
+}, 3000);
+</script>
+</body>
+</html>
